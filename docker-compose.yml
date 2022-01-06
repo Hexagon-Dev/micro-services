@@ -1,0 +1,86 @@
+version: '3'
+services:
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "81:81"
+      - "82:82"
+      - "83:83"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - hex-network
+
+  site:
+    build:
+      context: ./site
+    user: "1000:1000"
+    container_name: site
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./site/:/app:rw
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - hex-network
+
+  auth:
+    build:
+      context: ./auth
+    user: "1000:1000"
+    container_name: auth
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./auth/:/app:rw
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - hex-network
+
+  pokemon:
+    build:
+      context: ./pokemon
+    user: "1000:1000"
+    container_name: pokemon
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./pokemon/:/app:rw
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - hex-network
+
+  stats:
+    build:
+      context: ./stats
+    user: "1000:1000"
+    container_name: stats
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./stats/:/app:rw
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - hex-network
+
+  mariadb:
+    image: mariadb
+    container_name: mariadb
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: auth
+    networks:
+      - hex-network
+
+networks:
+  hex-network:
+    driver: bridge
