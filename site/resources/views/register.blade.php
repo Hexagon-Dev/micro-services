@@ -39,10 +39,15 @@
                 $.ajax({
                     url: "http://localhost:81/api/register",
                     crossDomain: true,
-                    method: "POST", // Что бы воспользоваться POST методом, меняем данную строку на POST
+                    method: "POST",
                     data: {"name": $('#name').val(), "email": $('#email').val(), "password": $('#password').val()},
                     success: function (data) {
-                        console.log(data); // Возвращаемые данные выводим в консоль
+                        modal.style.display = "block";
+                        modalText.innerHTML = data;
+                    },
+                    error: function (data) {
+                        modal.style.display = "block";
+                        modalText.innerHTML = 'ошибка';
                     }
                 });
             });

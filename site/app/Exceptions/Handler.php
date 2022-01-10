@@ -3,6 +3,10 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\ItemNotFoundException;
+use Illuminate\Validation\UnauthorizedException;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -34,8 +38,20 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            //
+        $this->renderable(function (UnprocessableEntityHttpException $e) {
+            return response()->json([
+                'error' => $e->getMessage(),
+            ], Response::HTTP_UNPROCESSABLE_ENTITY);
+        });
+        $this->renderable(function (ItemNotFoundException $e) {
+            return response()->json([
+                'error' => $e->getMessage(),
+            ], Response::HTTP_NOT_FOUND);
+        });
+        $this->renderable(function (UnauthorizedException $e) {
+            return response()->json([
+                'error' => 'unauthorized',
+            ], Response::HTTP_UNAUTHORIZED);
         });
     }
 }
