@@ -1,4 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/auth/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/auth/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/auth/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/auth/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/auth/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/auth/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/auth/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/auth/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/config" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/bus" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/auth/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/auth/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/translation" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/view" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/broadcasting" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/http" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/encryption" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/events" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/hashing" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/queue" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/database" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/testing" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/session" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/pagination" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/auth/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/console" />
+      <path value="$PROJECT_DIR$/auth/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/cache" />
+      <path value="$PROJECT_DIR$/auth/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/pipeline" />
+      <path value="$PROJECT_DIR$/auth/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/validation" />
+      <path value="$PROJECT_DIR$/auth/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/log" />
+      <path value="$PROJECT_DIR$/auth/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/auth/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/auth/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/auth/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/auth/vendor/illuminate/auth" />
+      <path value="$PROJECT_DIR$/auth/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/auth/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/auth/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/auth/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/auth/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/auth/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/auth/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/auth/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/auth/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/auth/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/auth/vendor/laravel/lumen-framework" />
+      <path value="$PROJECT_DIR$/auth/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/auth/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/auth/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/auth/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/auth/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/auth/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/auth/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/auth/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/auth/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/auth/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/auth/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/auth/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/auth/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/auth/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/auth/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/auth/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
 </project>

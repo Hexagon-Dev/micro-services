@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Firebase\JWT\BeforeValidException;
 use Firebase\JWT\JWT;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Hash;
-use Laravel\Lumen\Http\Request;
+use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Throwable;
 
@@ -35,11 +34,16 @@ class ApiAuthController extends Controller
      */
     public function register(Request $request): string
     {
-        dd('test');
-        /** @var User $user */
-        $user = User::query()->create($request->toArray());
+        $user = User::query()->create([
+            'name' => 'test',
+            'email' => 'test',
+            'password' => 'test',
+        ]);
 
-        return $user->toJson();
+        return response()->json([
+            'message' => 'successful',
+
+        ]);
     }
     /**
      * @param $value
