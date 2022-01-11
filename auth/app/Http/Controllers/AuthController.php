@@ -32,8 +32,15 @@ class AuthController extends Controller
 
         $this->checkToken($token);
 
+        if (str_contains($route, 'stats')) {
+            $url = env('STATS_URL');
+        } else {
+            $url = env('POKEMON_URL');
+        }
+
         $client = new Client();
-        return $client->request('GET', env('POKEMON_URL') . $route)->getBody();
+
+        return $client->request('GET', $url . $route)->getBody();
     }
 
     public function login(LoginUserRequest $request): JsonResponse
