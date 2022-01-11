@@ -7,9 +7,6 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"
-      - "81:81"
-      - "82:82"
-      - "83:83"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     networks:

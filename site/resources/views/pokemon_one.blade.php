@@ -18,7 +18,7 @@
             height: 300px;
         }
     </style>
-    <img src="{{ env('IMG_URL') . strtolower($pokemon['name']) . '.png' }}" alt="">
+    <img src="{{ env('GATEWAY_URL') . '/pokemon/img/' . strtolower($pokemon['name']) . '.png' }}" alt="">
     <table>
         <tr>
             <td>#</td>
