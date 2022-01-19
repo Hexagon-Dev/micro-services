@@ -14,4 +14,5 @@
         <a href="{{ route('login') }}"><h1>Login</h1></a>
         <a href="{{ route('register') }}"><h1>Register</h1></a>
     </div>
+    <img src="{{ asset('img/pikachu.png') }}" alt="">
 @endsection

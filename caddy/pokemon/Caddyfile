@@ -1,0 +1,11 @@
+{
+    debug
+    auto_https off
+}
+
+:80 {
+    root * /app/public
+    encode gzip
+    php_fastcgi pokemon:9000
+    file_server
+}

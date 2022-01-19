@@ -1,12 +1,13 @@
 version: '3'
 services:
 
-  nginx_site:
-    image: nginx:latest
-    container_name: nginx_site
+  caddy_site:
+    image: caddy
+    container_name: caddy_site
     restart: unless-stopped
     volumes:
-      - ./nginx/site.conf:/etc/nginx/nginx.conf
+      - ./site/public:/app/public:rw
+      - ./caddy/site/Caddyfile:/etc/caddy/Caddyfile
     networks:
       hex-network:
         aliases:
@@ -16,12 +17,13 @@ services:
       - "traefik.http.routers.frontend.rule=PathPrefix(`/`)"
       - "traefik.docker.network=hex-network"
 
-  nginx_auth:
-    image: nginx:latest
-    container_name: nginx_auth
+  caddy_auth:
+    image: caddy
+    container_name: caddy_auth
     restart: unless-stopped
     volumes:
-      - ./nginx/auth.conf:/etc/nginx/nginx.conf
+      - ./auth/public:/app/public:rw
+      - ./caddy/auth/Caddyfile:/etc/caddy/Caddyfile
     networks:
       hex-network:
         aliases:
@@ -31,12 +33,13 @@ services:
       - "traefik.http.routers.back_auth.rule=Host(`auth_service`)"
       - "traefik.docker.network=hex-network"
 
-  nginx_pokemon:
-    image: nginx:latest
-    container_name: nginx_pokemon
+  caddy_pokemon:
+    image: caddy
+    container_name: caddy_pokemon
     restart: unless-stopped
     volumes:
-      - ./nginx/pokemon.conf:/etc/nginx/nginx.conf
+      - ./pokemon/public:/app/public:rw
+      - ./caddy/pokemon/Caddyfile:/etc/caddy/Caddyfile
     networks:
       hex-network:
         aliases:
@@ -46,12 +49,13 @@ services:
       - "traefik.http.routers.back_pokemon.rule=Host(`pokemon_service`)"
       - "traefik.docker.network=hex-network"
 
-  nginx_stats:
-    image: nginx:latest
-    container_name: nginx_stats
+  caddy_stats:
+    image: caddy
+    container_name: caddy_stats
     restart: unless-stopped
     volumes:
-      - ./nginx/stats.conf:/etc/nginx/nginx.conf
+      - ./stats/public:/app/public:rw
+      - ./caddy/stats/Caddyfile:/etc/caddy/Caddyfile
     networks:
       hex-network:
         aliases:
@@ -60,6 +64,67 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.back_stats.rule=Host(`stats_service`)"
       - "traefik.docker.network=hex-network"
+
+
+#  nginx_site:
+#    image: nginx:latest
+#    container_name: nginx_site
+#    restart: unless-stopped
+#    volumes:
+#      - ./nginx/site.conf:/etc/nginx/nginx.conf
+#    networks:
+#      hex-network:
+#        aliases:
+#          - site_service
+#    labels:
+#      - "traefik.enable=true"
+#      - "traefik.http.routers.frontend.rule=PathPrefix(`/`)"
+#      - "traefik.docker.network=hex-network"
+#
+#  nginx_auth:
+#    image: nginx:latest
+#    container_name: nginx_auth
+#    restart: unless-stopped
+#    volumes:
+#      - ./nginx/auth.conf:/etc/nginx/nginx.conf
+#    networks:
+#      hex-network:
+#        aliases:
+#          - auth_service
+#    labels:
+#      - "traefik.enable=true"
+#      - "traefik.http.routers.back_auth.rule=Host(`auth_service`)"
+#      - "traefik.docker.network=hex-network"
+#
+#  nginx_pokemon:
+#    image: nginx:latest
+#    container_name: nginx_pokemon
+#    restart: unless-stopped
+#    volumes:
+#      - ./nginx/pokemon.conf:/etc/nginx/nginx.conf
+#    networks:
+#      hex-network:
+#        aliases:
+#          - pokemon_service
+#    labels:
+#      - "traefik.enable=true"
+#      - "traefik.http.routers.back_pokemon.rule=Host(`pokemon_service`)"
+#      - "traefik.docker.network=hex-network"
+#
+#  nginx_stats:
+#    image: nginx:latest
+#    container_name: nginx_stats
+#    restart: unless-stopped
+#    volumes:
+#      - ./nginx/stats.conf:/etc/nginx/nginx.conf
+#    networks:
+#      hex-network:
+#        aliases:
+#          - stats_service
+#    labels:
+#      - "traefik.enable=true"
+#      - "traefik.http.routers.back_stats.rule=Host(`stats_service`)"
+#      - "traefik.docker.network=hex-network"
 
   traefik:
     image: traefik:latest

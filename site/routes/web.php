@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ApiAuthController;
 use App\Http\Controllers\PokemonController;
 use Illuminate\Support\Facades\Route;
 

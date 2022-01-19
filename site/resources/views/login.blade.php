@@ -35,14 +35,14 @@
                 e.preventDefault();
 
                 $.ajax({
-                    url: "http://localhost:81/api/login",
+                    url: "http://localhost/api/login",
                     crossDomain: true,
                     method: "POST",
                     data: {"email": $('#email').val(), "password": $('#password').val()},
                     success: function (data) {
                         console.log(data);
                         modal.style.display = "block";
-                        modalText.innerHTML = "<h2>Your token:</h2><p style = \"background: lightcyan;overflow-x: auto;padding: 20px;\">" + data.token + "</p>";
+                        modalText.innerHTML = "<h2>Your token:</h2><p style = \"background: lightcyan;overflow-x: auto;padding: 20px;\">" + data['token'] + "</p>";
                     },
                     error: function (data) {
                         modal.style.display = "block";
